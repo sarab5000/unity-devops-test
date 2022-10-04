@@ -88,7 +88,6 @@ namespace Platformer.Mechanics
                     {
                         Schedule<PlayerJumped>().player = this;
                         jumpState = JumpState.InFlight;
-                        throw new Exception("Tarek: this is a test error");
                     }
                     break;
                 case JumpState.InFlight:
@@ -100,7 +99,6 @@ namespace Platformer.Mechanics
                     break;
                 case JumpState.Landed:
                     jumpState = JumpState.Grounded;
-                    Environment.FailFast("Tarek: This is a fatal error!!");
                     break;
             }
         }
